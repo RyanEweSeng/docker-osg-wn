@@ -9,7 +9,6 @@ RUN yum -y install https://repo.grid.iu.edu/osg/3.4/osg-3.4-el7-release-latest.r
                    yum-plugin-priorities && \
     yum -y install  \
                    osg-wn-client \
-                   osg-wn-client-glexec \
                    redhat-lsb-core
 
 # Install Singularity
