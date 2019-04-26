@@ -3,15 +3,14 @@
 FROM centos:centos7
 
 LABEL name="OSG 3.4 Worker Node Client on EL 7"
-LABEL build-date="20190425-1242"
+LABEL build-date="20190426-1330"
 
-RUN yum -y install https://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm && \
-    yum -y install epel-release \
+RUN yum -y install https://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm \
+                   epel-release \
                    yum-plugin-priorities && \
     yum -y install  \
                    osg-wn-client \
-                   redhat-lsb-core
-
-# Install Singularity
-RUN yum -y install --enablerepo=osg-upcoming-development singularity && \
-    yum clean all
+                   redhat-lsb-core \
+                   singularity && \
+    yum clean all && \
+    rm -rf /var/cache/yum/*
