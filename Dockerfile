@@ -3,7 +3,7 @@
 FROM centos:centos6
 
 LABEL name="OSG 3.4 Worker Node Client on EL 6"
-LABEL build-date="20191010-1510"
+LABEL build-date="20191017-1823"
 
 RUN yum -y install https://repo.opensciencegrid.org/osg/3.4/osg-3.4-el6-release-latest.rpm \
                    epel-release \
